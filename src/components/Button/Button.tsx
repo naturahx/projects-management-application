@@ -1,14 +1,15 @@
 import React, { FC } from "react";
-import style from "./Button.module.css";
+import styles from "./Button.module.css";
 
 interface ButtonProps {
   children: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  style?: React.CSSProperties
 }
 
-const Button: FC<ButtonProps> = ({ children, onClick }) => {
+const Button: FC<ButtonProps> = ({ children, onClick, style }) => {
   return (
-    <button onClick={onClick} className={style.button}>
+    <button style={style} onClick={onClick} className={styles.button}>
       {children}
     </button>
   )

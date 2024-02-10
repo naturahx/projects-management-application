@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './App.css';
 import DeveloperPanel from './components/DeveloperPanel/DeveloperPanel';
+import OutputPanel from "./components/OutputPanel/OutputPanel";
 
 
 function App() {
@@ -13,11 +14,11 @@ function App() {
 
   return (
     <div className='wrapper'>
-      <DeveloperPanel updateProject={updateProject}/>
-      {/* {project === false 
-      ? <h1></h1>
+      <DeveloperPanel updateProject={updateProject}/> 
+      {project === false 
+      ? <h1 className="title">Добро пожаловать в Project Managment!</h1>
     : <OutputPanel />
-    } */}
+    }
     
     </div>
   );
