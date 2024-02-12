@@ -4,6 +4,7 @@
   border: 1px solid #2e2e2e;
   border-radius: 25px;
   width: 500px;
+  position: relative;
 }
 
 .text {

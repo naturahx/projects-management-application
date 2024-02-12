@@ -9,6 +9,7 @@ const App: FC = () => {
   const [list, setList] = useState<boolean>(false);
   const [titleState, setTitleState] = useState<string>("");
   const [descriptionState, setDescriptionState] = useState<string>("");
+  // const [listing, setListing] = useState<string[]>([])
 
   const updateProject = () => {
     setProject((prevProject) => !prevProject);

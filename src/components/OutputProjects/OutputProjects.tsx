@@ -1,5 +1,6 @@
 import { FC } from "react";
 import style from "./OutputProjects.module.css";
+import Button from "../Button/Button";
 
 
 interface OutputProjectsProps {
@@ -13,6 +14,7 @@ const OutputProjects: FC<OutputProjectsProps> = ({ title, description }) => {
     <div className={style.display}>
       <div className={style.text}>{title}</div>
       <div className={style.subtext}>{description}</div>
+      <Button style={{background: 'red', position: 'absolute', bottom: '0', marginLeft: '50px'}}>Удалить</Button>
     </div>
   )
 }
