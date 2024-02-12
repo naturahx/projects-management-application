@@ -29,7 +29,7 @@ const App: FC = () => {
     setTitleState(e.target.value);
   };
 
-  const handleDescriptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleDescriptionChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setDescriptionState(e.target.value);
   };
 

@@ -14,7 +14,7 @@ const OutputProjects: FC<OutputProjectsProps> = ({ title, description }) => {
     <div className={style.display}>
       <div className={style.text}>{title}</div>
       <div className={style.subtext}>{description}</div>
-      <Button style={{background: 'red', position: 'absolute', bottom: '0', marginLeft: '50px'}}>Удалить</Button>
+      <Button style={{background: 'red', color: 'white', position: 'absolute', bottom: '0', marginLeft: '50px'}}>Удалить</Button>
     </div>
   )
 }

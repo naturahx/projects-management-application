@@ -5,7 +5,7 @@ import { ChangeEvent, FC, useState } from "react";
 interface OutputPanelProps {
   onSubmit: () => void;
   onTitleChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onDescriptionChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onDescriptionChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
 const OutputPanel: FC<OutputPanelProps> = ({
@@ -21,6 +21,7 @@ const OutputPanel: FC<OutputPanelProps> = ({
     setTitle("");
     setDescription("");
   };
+  
 
   return (
     <div className={style.display}>
@@ -34,7 +35,7 @@ const OutputPanel: FC<OutputPanelProps> = ({
         placeholder="Название проекта ..."
         className={style.input}
       />
-      <input
+      <textarea
         placeholder="Описание проекта ..."
         className={style.textarea}
         value={description}
@@ -42,7 +43,7 @@ const OutputPanel: FC<OutputPanelProps> = ({
           setDescription(e.target.value);
           onDescriptionChange(e);
         }}
-      ></input>
+      ></textarea>
       <Button
         onClick={handleSubmit}
         style={{ background: "green", color: "white" }}
